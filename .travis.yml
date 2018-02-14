@@ -12,6 +12,12 @@ matrix:
       otp_release: 19.2
 env:
   - MIX_ENV=test
+
+cache:
+  directories:
+    - deps
+    - _build
+
 script:
   - mix compile --warning-as-errors
   - if [ "$TRAVIS_ELIXIR_VERSION" == "1.6.0" ]; then mix format --check-formatted; fi
