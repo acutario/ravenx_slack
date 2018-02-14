@@ -21,6 +21,8 @@ defmodule RavenxSlack.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ravenx, "~> 1.1.3"},
+      {:httpoison, "~> 0.12 or ~> 1.0"},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false}
     ]
   end
