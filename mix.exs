@@ -4,7 +4,7 @@ defmodule RavenxSlack.MixProject do
   def project do
     [
       app: :ravenx_slack,
-      version: "0.0.1",
+      version: "0.1.0",
       elixir: "~> 1.4",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -28,6 +28,7 @@ defmodule RavenxSlack.MixProject do
       {:ravenx, "~> 1.1.3"},
       {:poison, "~> 2.0 or ~> 3.0"},
       {:httpoison, "~> 0.12 or ~> 1.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev},
       {:mock, "~> 0.3.0", only: :test},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false}
     ]
@@ -35,6 +36,7 @@ defmodule RavenxSlack.MixProject do
 
   defp docs do
     [
+      main: "readme",
       source_url: "https://github.com/acutario/ravenx_slack",
       extras: ["README.md"]
     ]
