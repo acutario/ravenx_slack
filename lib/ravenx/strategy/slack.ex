@@ -11,7 +11,7 @@ defmodule Ravenx.Strategy.Slack do
   Function used to send a notification to Slack.
 
   The function receives a map including a `text` used to build the message, and an
-  `options` Mmp that can include this configuration:
+  `options` Map that can include this configuration:
 
   * `url`: URL of Slack integration to call.
   * `username`: Username of the bot used to send the notification.
@@ -54,8 +54,6 @@ defmodule Ravenx.Strategy.Slack do
       {"Accept", "application/json"},
       {"Content-Type", "application/json"}
     ]
-
-    HTTPoison.start()
 
     case HTTPoison.post(url, json_payload, header) do
       {:ok, %HTTPoison.Response{body: response, status_code: 200}} ->
