@@ -28,6 +28,7 @@ defmodule RavenxSlack.MixProject do
       {:ravenx, "~> 1.1.3"},
       {:poison, "~> 2.0 or ~> 3.0"},
       {:httpoison, "~> 0.12 or ~> 1.0"},
+      {:mock, "~> 0.3.0", only: :test},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false}
     ]
   end
